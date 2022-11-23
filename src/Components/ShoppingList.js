@@ -9,7 +9,7 @@ import PlantItem from './PlantItem'
 //     'yucca',
 //     'palmier'
 // ]
-function ShoppingList() {
+function ShoppingList({cart,updateCart}) {
     const categories = plantList.reduce(
 		(acc, plant) =>
 			acc.includes(plant.category) ? acc : acc.concat(plant.category),
@@ -17,7 +17,7 @@ function ShoppingList() {
 	)
   
 	return (
-		<div>
+		<div className='lmj-shopping-list'>
 			<ul>
 				{categories.map((cat) => (
 					<li key={cat}>{cat}</li>
@@ -34,13 +34,11 @@ function ShoppingList() {
                     // <CareScale careType='water' scaleValue={plant.water}/>
                     
                     // </li>
-                    <PlantItem
-                    id={id}
-                    cover={cover}
-                    name={name}
-                    water={water}
-                    light={light}
-                    />
+                    <div key={id}>
+                        <PlantItem cover={cover} name={name} water={water} light={light} />
+                        <button onClick={()=> updateCart(cart + 1)}>Ajouter</button>
+                    </div>
+                 
 				))}
 			</ul>
             

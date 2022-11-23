@@ -1,6 +1,15 @@
 import React from 'react'
+
 // const {scaleValue, careType} = props
+
+const quantityLabel = {
+	1: 'peu',
+	2: 'modérément',
+	3: 'beaucoup'
+}
+
 function CareScale(props ) {
+
     const scaleValue = props.scaleValue
     const careType = props.careType
     const range = [1, 2, 3]
@@ -10,7 +19,18 @@ function CareScale(props ) {
     // {range.map((rangeElem) =>
     //     scaleValue >= rangeElem ? <span key={rangeElem.toString()}>☀️</span> : null
     // )}
-    range.map((rangeElem)=> scaleValue >= rangeElem ? <span key={rangeElem.toString()}>{scaleType}</span> : null)
+    <div onClick={() =>
+      alert(
+        `Cette plante requiert ${quantityLabel[scaleValue]} ${
+          careType === 'light' ? 'de lumière' : "d'arrosage"
+        }`
+      )
+    }>
+
+     {range.map((rangeElem)=> scaleValue >= rangeElem ? (<span key={rangeElem.toString()}>{scaleType}</span> ): null
+      )}
+    </div>
+    
         // scaleValue >= rangeElem ? <span key={rangeElem.toString()}>🌞</span> : null)
   
         
