@@ -1,7 +1,7 @@
 import React from 'react'
 import monstera from '../assets/monstera.jpg'
-import lyrata from '../assets/lyrata.jpg'
-import pothos from '../assets/pothos.jpg'
+import aloe from '../assets/aloe.jpeg'
+import moringa from '../assets/moringa.jpeg'
 import calathea from '../assets/calathea.jpg'
 import olivier from '../assets/olivier.jpg'
 import succulent from '../assets/succulent.jpg'
@@ -20,21 +20,22 @@ export const plantList = [
 		price: 15
 	},
 	{
-		name: 'ficus lyrata',
-		category: 'classique',
+		name: 'Aloe',
+		category: 'plante grasse',
 		id: '2ab',
 		light: 3,
 		water: 1,
-		cover: lyrata,
+		cover: aloe,
 		price: 16
 	},
 	{
-		name: 'pothos argenté',
+		name: 'Moringa',
 		category: 'classique',
 		id: '3sd',
 		light: 1,
 		water: 2,
-		cover: pothos
+		cover: moringa,
+		price:5
 	},
 	{
 		name: 'calathea',
@@ -70,7 +71,8 @@ export const plantList = [
 		isBestSale: true,
 		light: 2,
 		water: 3,
-		cover: basil
+		cover: basil,
+		price:5
 	},
 	{
 		name: 'cactus',

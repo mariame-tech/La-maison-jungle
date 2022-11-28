@@ -10,8 +10,10 @@ import logo from './assets/logo.png'
 import Footer from './Components/Footer';
 import './styles/Layout.css'
 
+
 function App() {
   const [cart, updateCart] = useState([])
+ 
   return (
     <div className="app">
        <Header>
